@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Globalstyles, theme } from './theme';
+import { ThemeProvider } from 'styled-components';
 
-function App() {
+import Backlog from './pages/Backlog';
+import Board from './pages/Board';
+import Home from './pages/Home';
+import { Sidebar } from './components/Organisms';
+
+import SidebarState from './context/sidebar/sidebarState';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Router>
+      <ThemeProvider theme={theme}>
+        <SidebarState>
+          <Globalstyles/>
+          <Switch>
+            <Route exact path="/backlog" component={Backlog}/>
+            <Route exact path="/board" component={Board}/>
+            <Route exact path="/" component={Home}/>
+          </Switch>
+          <Sidebar/>
+        </SidebarState>
+      </ThemeProvider>
+    </Router>
+  )
+};
 
 export default App;
