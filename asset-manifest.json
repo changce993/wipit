@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/wipit/static/js/main.13f76de0.chunk.js",
+    "main.js.map": "/wipit/static/js/main.13f76de0.chunk.js.map",
+    "runtime-main.js": "/wipit/static/js/runtime-main.c36c30b3.js",
+    "runtime-main.js.map": "/wipit/static/js/runtime-main.c36c30b3.js.map",
+    "static/js/2.b7568d4e.chunk.js": "/wipit/static/js/2.b7568d4e.chunk.js",
+    "static/js/2.b7568d4e.chunk.js.map": "/wipit/static/js/2.b7568d4e.chunk.js.map",
+    "index.html": "/wipit/index.html",
+    "static/js/2.b7568d4e.chunk.js.LICENSE.txt": "/wipit/static/js/2.b7568d4e.chunk.js.LICENSE.txt",
+    "static/media/arrowLeft.f14a436d.svg": "/wipit/static/media/arrowLeft.f14a436d.svg",
+    "static/media/avatar.5b938641.png": "/wipit/static/media/avatar.5b938641.png",
+    "static/media/cross.0d9d1354.svg": "/wipit/static/media/cross.0d9d1354.svg",
+    "static/media/selectOption.27b8a721.svg": "/wipit/static/media/selectOption.27b8a721.svg",
+    "static/media/star.a40b83fd.svg": "/wipit/static/media/star.a40b83fd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c36c30b3.js",
+    "static/js/2.b7568d4e.chunk.js",
+    "static/js/main.13f76de0.chunk.js"
+  ]
+}
