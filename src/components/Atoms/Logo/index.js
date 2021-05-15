@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const Logo = styled.a`
+const Logo = styled(Link)`
   font-size: ${props => props.theme.fontSize.display1};
   color: ${props => props.theme.colors.primary};
   font-weight: ${props => props.theme.fontWeight.semibold};
@@ -9,7 +10,7 @@ const Logo = styled.a`
 `;
 
 Logo.defaultProps = {
-  href: '/',
+  to: '/',
   children: 'WIPIT'
 }
 

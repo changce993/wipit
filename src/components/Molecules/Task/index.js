@@ -1,19 +1,25 @@
 import React, { useContext } from 'react';
-import { Text, Tag } from '../../Atoms';
-import { Task, Title, Tags } from './styled';
+import { Text } from '../../Atoms';
+import Tags from '../Tags';
+import { Task, Title } from './styled';
 import sidebarContext from '../../../context/sidebar/sidebarContext';
+import tasksContext from '../../../context/tasks/tasksContext';
 
 const Index = ({ task, ...props }) => {
   const { title, description, tags } = task;
-  const { handleShowSidebar } = useContext(sidebarContext);
-  const taskSidebar = { title }
+  const { handleShowSidebar, CONSTANT } = useContext(sidebarContext);
+  const { getTask } = useContext(tasksContext);
+
+  const handleTask = () => {
+    handleShowSidebar(CONSTANT.task)
+    getTask(task);
+  };
+
   return (
-    <Task {...props} onClick={() => handleShowSidebar(taskSidebar)}>
+    <Task {...props} onClick={handleTask}>
       <Title>{title}</Title>
       <Text color="darkGray">{description}</Text>
-      <Tags>
-        {tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
-      </Tags>
+      <Tags tags={tags}/>
     </Task>
   )
 }

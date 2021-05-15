@@ -20,10 +20,5 @@ export const Title = styled.h3`
   font-size: ${props => props.theme.fontSize.header};
   font-weight: ${props => props.theme.fontWeight.medium};
   font-family: ${props => props.theme.fontFamily.primary};
-`;
-
-export const Tags = styled.div`
-  display: flex;
-  grid-gap: .5rem;
-  flex-wrap: wrap;
+  color: ${props => props.theme.colors.black};
 `;

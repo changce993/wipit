@@ -7,7 +7,7 @@ const Button = styled.button`
   transition: ${props => props.theme.transition.default};
   outline: none;
   cursor: ${props => !props.disable && 'pointer'};
-  margin: ${props => props.margin || '16px auto'};
+  margin: ${props => props.margin};
   width: ${props => props.width || '160px'};
   max-width: 100%;
   height: 48px;
@@ -15,11 +15,11 @@ const Button = styled.button`
 
 export const Primary = styled(Button)`
   border: none;
-  color: ${props => props.disable ? props.theme.colors.primary : props.theme.colors.white};
+  color: white;
   background-color: ${props => props.disable ? props.theme.colors.lightPrimary : props.theme.colors.primary};
 
   :hover {
-    color: ${props => props.disable ? props.theme.colors.primary : props.theme.colors.white};
+    color: white;
     background-color: ${props => props.disable ? props.theme.colors.lightPrimary : props.theme.colors.darkPrimary};
   }
 `;

@@ -12,6 +12,7 @@ const Avatar = styled.img`
   border-radius: ${props => props.theme.rounded[props.rounded] || props.theme.rounded.circle};
   border: ${props => props.border + props.theme.colors[props.borderColor]};
   object-fit: cover;
+  cursor: ${props => props.cursor || 'pointer'};
 `;
 
 Avatar.defaultProps = {

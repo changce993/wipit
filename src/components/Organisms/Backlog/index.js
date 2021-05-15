@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Container } from './styled';
 import { Task } from '../../Molecules';
-import tasks from '../../Mocks/tasks';
 import { useResponsive } from '../../../hooks';
+import tasksContext from '../../../context/tasks/tasksContext';
 
 const Index = () => {
   const { md, xl, xxl, xxxl } = useResponsive();
+  const { tasks, getTasks } = useContext(tasksContext);
+
+  useEffect(() => getTasks(), []);
+
   return (
-    <Container repeat={md ? 1 : xl ? 2 : xxl ? 3 : xxxl ? 4 : 5}>
+    <Container repeat={md ? 2 : xl ? 3 : xxl ? 4 : xxxl ? 5 : 6}>
       {tasks.map(task => <Task transition fullBorder task={task} key={task.id}/>)}
     </Container>
   )

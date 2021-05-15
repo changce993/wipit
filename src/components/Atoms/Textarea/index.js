@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Textarea = styled.textarea`
     ${props => props}
     outline: none;
-    border: ${props => props.border + props.theme.colors[props.borderColor] || props.error ? `1px solid ${props.theme.colors.error}` : `1px solid ${props.theme.colors.lightPrimary}`};
+    border: ${props => props.border + props.theme.colors[props.borderColor] || props.error ? `1px solid ${props.theme.colors.error}` : `1px solid ${props.theme.colors.lightGray}`};
     background-color: ${props => props.theme.colors[props.bg] || props.theme.colors.white};
     padding: ${props => props.padding || '12px 16px'};
     border-radius: ${props => props.theme.rounded[props.rounded] || props.theme.rounded.sm};
@@ -17,11 +17,11 @@ const Textarea = styled.textarea`
 
     :hover {
         background-color: ${props => props.theme.colors[props.hoverBg]};
-        border: ${props => props.border + props.theme.colors[props.hoverBorderColor] || props.error ? `1px solid ${props.theme.colors.error}` : `1px solid ${props.theme.colors.primary}`};
+        border: ${props => props.border + props.theme.colors[props.hoverBorderColor] || props.error ? `1px solid ${props.theme.colors.error}` : `1px solid ${props.theme.colors.gray}`};
     }
 
     :focus {
-        border: ${props => props.border + props.theme.colors[props.borderColor] || props.error ? `1px solid ${props.theme.colors.error}` : `1px solid ${props.theme.colors.primary}`};
+        border: ${props => props.border + props.theme.colors[props.borderColor] || props.error ? `1px solid ${props.theme.colors.error}` : `1px solid ${props.theme.colors.gray}`};
     }
 `;
 

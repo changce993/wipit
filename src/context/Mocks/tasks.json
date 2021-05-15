@@ -1,0 +1,69 @@
+[
+  {
+    "id": "0",
+    "title": "Subir una foto a node con multer",
+    "description": "Necesito subir una foto con multer. Tengo react tambien en el proyecto, por eso se me complica.",
+    "tags": ["Develop", "Backend", "Javascript", "30 min", "Easy"],
+    "withUser": 3
+  },{
+    "id": "1",
+    "title": "React + Styled components y Atomic design",
+    "description": "Como usar Styled components con react siguiendo atomic design.",
+    "tags": ["Ask A Quick Question", "Frontend", "Javascript", "1 hour", "Medium"],
+    "withUser": 1
+  },{
+    "id": "2",
+    "title": "Desarrollo backend",
+    "description": "Necesito hacer un backend con Apollo Server y GraphQL.",
+    "tags": ["Develop", "Backend", "Javascript", "2 hour", "Moderate"],
+    "withUser": 3
+  },{
+    "id": "3",
+    "title": "Quiero practicar reactjs",
+    "description": "Hice un curso de react y quiero practicar componentes y props con alguien. ¿quien se suma?",
+    "tags": ["Develop", "Backend", "React", "30 min", "Medium"],
+    "withUser": 7
+  },{
+    "id": "4",
+    "title": "CSS Grid",
+    "description": "Ya domino Flexbox y ahora quiero ir por CSS Grid",
+    "tags": ["Practice", "Frontend", "CSS", "10 min", "Medium"],
+    "withUser": 42
+  },{
+    "id": "5",
+    "title": "MERN Stack",
+    "description": "Tengo conocimientos basicos sobre el Stack MERN y quisiera hacer un proyecto con alguien ",
+    "tags": ["Practice", "Fullstack", "Javascript", "2 hour", "Moderate"],
+    "withUser": 12
+  },{
+    "id": "6",
+    "title": "Vista previa al cargar una imagen",
+    "description": "Quiero hacer que el usuario vea un preview de la imagen que esta cargando",
+    "tags": ["Develop", "Frontend", "Angular", "30 min", "Easy"],
+    "withUser": 48
+  },{
+    "id": "7",
+    "title": "Migracion a Nuxtjs",
+    "description": "Estoy migrando una aplicacion hecha en react a Nuxtjs",
+    "tags": ["Develop", "Frontned", "Javascript", "30 min", "Easy"],
+    "withUser": 42
+  },{
+    "id": "8",
+    "title": "Quiero aprender MongoDB",
+    "description": "Hice un curso de backend donde vimos Oracle, y quiero aprender a usar MongoDB",
+    "tags": ["Test", "Database", "Javascript", "30 min", "Moderate"],
+    "withUser": 33
+  },{
+    "id": "9",
+    "title": "Como hacer una libreria",
+    "description": "Quiero hacer una libreria de estilos con javascript y styled-components",
+    "tags": ["Deploy", "Frontend", "Javascript", "4 min", "advanced"],
+    "withUser": 41
+  },{
+    "id": "10",
+    "title": "Documentacion con Storybook",
+    "description": "Estoy por comenzar un nuevo proyecto y necesito aprender Storybook para documentar los componentes",
+    "tags": ["Develop", "Frontend", "Javascript", "1 min", "Medium"],
+    "withUser": 362
+  }
+]

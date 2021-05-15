@@ -6,9 +6,18 @@ import { SHOW_SIDEBAR, HIDDE_SIDEBAR } from '../../types';
 
 const SidebarState = ({ children }) => {
 
+  const CONSTANT = {
+    editProfile: 'EDIT_PROFILE',
+    login: 'LOGIN',
+    signup: 'SIGNUP',
+    newTask: 'NEW_TASK',
+    task: 'TASK',
+    rating: 'RATING'
+  }
+
   const initialState = {
     showSidebar: false,
-    content: {}
+    content: ''
   };
 
   const [ state, dispatch ] = useReducer(sidebarReducer, initialState);
@@ -26,6 +35,7 @@ const SidebarState = ({ children }) => {
 
   return (
     <SidebarContext.Provider value={{
+      CONSTANT,
       showSidebar,
       content,
       handleShowSidebar,

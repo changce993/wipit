@@ -1,7 +1,7 @@
 export default {
   colors: {
     primary: '#F95959',
-    darkPrimary: '#3C1A89',
+    darkPrimary: '#E05050',
     lightPrimary: '#FFEEEE',
     
     secondary: '#FFC404',
@@ -16,10 +16,13 @@ export default {
     lightGray: '#F2F2F2',
     bgGray: '#f9f9ff',
     
-    error: '#FF7F40',
-    info: '#448AFF',
+    error: '#F95959',
+    lightError: '#FFF6F6',
+    info: '#448AFA',
+    lightInfo: '#F5F9FF',
     warning: '#FECE45',
-    success: '#21B94A',
+    success: '#1CA751',
+    lightSuccess: '#F3FBF6',
     white: '#FFF',
     transparent: 'rgba(255,255,255,.0)'
   },
@@ -64,6 +67,6 @@ export default {
     xxxl: '@media(max-width: 2560px)',
   },
   shadow: {
-    1: '0 4px 10px 0 rgba(10,22,40,0.06)',
+    1: '0 4px 10px 0 rgba(10,22,40,0.10)',
   },
 }

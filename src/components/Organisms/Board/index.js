@@ -1,27 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Board from './Board';
 import { Container } from './styled';
+import tasksContext from '../../../context/tasks/tasksContext';
 
-const index = () => {
-  const description = 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.';
-  const tags = ['Ask a quick question', 'Frontend', 'Javascript', '45 min', 'Medium']
-  const tasks = [
-    {id: 0, title: 'titulo 0', description, tags},
-    {id: 1, title: 'titulo 1', description, tags},
-    {id: 2, title: 'titulo 2', description, tags},
-    {id: 3, title: 'titulo 3', description, tags},
-    {id: 4, title: 'titulo 4', description, tags},
-    {id: 5, title: 'titulo 5', description, tags},
-    {id: 6, title: 'titulo 6', description, tags},
-  ];
+const Index = () => {
+  const { tasks, getTasks } = useContext(tasksContext);
+
+  useEffect(() => getTasks(), []);
 
   return (
     <Container>
-      <Board tasks={tasks.slice(2, 5)} title="My tasks"/>
-      <Board tasks={tasks} title="In progress"/>
-      <Board title="Done"/>
+      <Board title="My tasks" tasks={tasks.slice(1, 2)}/>
+      <Board title="In progress" tasks={tasks.filter(task => task.withUser === 3)}/>
+      <Board title="Done" tasks={tasks.slice(3, -1)}/>
     </Container>
   )
 }
 
-export default index
+export default Index

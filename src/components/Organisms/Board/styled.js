@@ -37,7 +37,7 @@ export const Tasks = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.colors.white};
+  color: white;
   font-size: ${props => props.theme.fontSize.text};
   border-radius: ${props => props.theme.rounded.circle};
   background-color: ${props => props.theme.colors.primary};

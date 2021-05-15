@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.p`
-  font-size: ${props => props.theme.fontSize.caption};
+  font-size: ${props => props.theme.fontSize.label};
   color: ${props => props.theme.colors.primary};
   padding: .5rem;
   background-color: ${props => props.theme.colors.lightPrimary};

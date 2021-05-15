@@ -1,5 +1,7 @@
 import React from 'react';
-import { NavLink, NavigationContainer } from './styled';
+import { NavigationContainer } from './styled';
+import { SwitchTheme } from '../../Molecules';
+import { Link } from '../../Atoms';
 
 const Navigation = () => {
   const links = [
@@ -8,9 +10,8 @@ const Navigation = () => {
   ];
   return (
     <NavigationContainer>
-      {links.map(({name, url}) => (
-        <NavLink to={url} isActive={window.location.pathname === url}>{name}</NavLink>
-      ))}
+      {links.map(({name, url}) => <Link to={url} isActive={window.location.pathname === url}>{name}</Link>)}
+      <SwitchTheme/>
     </NavigationContainer>
   )
 }

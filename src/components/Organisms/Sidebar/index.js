@@ -1,12 +1,26 @@
 import React, { useContext } from 'react';
-import { Container, Title, Close } from './styled';
+import { Container } from './styled';
 import sidebarContext from '../../../context/sidebar/sidebarContext';
 
+import Login from './Login';
+import Signup from './Signup';
+import EditProfile from './EditProfile';
+import NewTask from './NewTask';
+import Task from './Task';
+import Rating from './Rating';
+
 const Index = () => {
-  const { showSidebar, content, handleHiddeSidebar } = useContext(sidebarContext);
+
+  const { showSidebar, content, CONSTANT } = useContext(sidebarContext);
+
   return (
     <Container showSidebar={showSidebar}>
-      <Title>{content?.title || ''} <Close onClick={handleHiddeSidebar}/></Title>
+      {content === CONSTANT.editProfile && <EditProfile/>}
+      {content === CONSTANT.login && <Login/>}
+      {content === CONSTANT.signup && <Signup/>}
+      {content === CONSTANT.newTask && <NewTask/>}
+      {content === CONSTANT.task && <Task/>}
+      {content === CONSTANT.rating && <Rating/>}
     </Container>
   )
 }

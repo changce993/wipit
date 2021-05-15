@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import { Logo, Avatar, Text } from '../../Atoms';
+import { Logo, Avatar, Link } from '../../Atoms';
+import { SwitchTheme } from '../../Molecules';
 import { Navbar, Nav, NavigationContainer } from './styled';
 import Navigation from './Navigation';
 import sidebarContext from '../../../context/sidebar/sidebarContext';
+import userContext from '../../../context/user/userContext';
 
 const Index = ({ sidebar }) => {
 
-  const { handleShowSidebar } = useContext(sidebarContext);
-
-  const taskSidebar = { title: 'Post a new task' };
-  const profileSidebar = { title: 'Edit your profile' };
+  const { handleShowSidebar, CONSTANT } = useContext(sidebarContext);
+  const { user } = useContext(userContext);
 
   return (
     <Navbar>
@@ -18,22 +18,23 @@ const Index = ({ sidebar }) => {
       </Nav>
 
       <Nav>
-        <NavigationContainer>
-          <Avatar
-            cursor="pointer"
-            onClick={() => handleShowSidebar(profileSidebar)}
-          />
-          <Text
-            color="primary"
-            weight="semibold"
-            cursor="pointer"
-            onClick={() => handleShowSidebar(taskSidebar)}
-          >
-            Post a task
-          </Text>
-        </NavigationContainer>
+        {user ? (
+          <>
+            <NavigationContainer>
+              <Avatar src={user?.avatar} onClick={() => handleShowSidebar(CONSTANT.editProfile)}/>
+              <Link color="primary" onClick={() => handleShowSidebar(CONSTANT.newTask)}>Post a task</Link>
+            </NavigationContainer>
 
-        <Navigation/>
+            <Navigation/>
+          </>
+        ) : (
+          <NavigationContainer marginLeft="auto">
+            <Link onClick={() => handleShowSidebar(CONSTANT.login)}>Login</Link>
+            <Link onClick={() => handleShowSidebar(CONSTANT.signup)}>Register</Link>
+            <SwitchTheme/>
+          </NavigationContainer>
+        )}
+        
       </Nav>
     </Navbar>
   )

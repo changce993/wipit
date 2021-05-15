@@ -12,4 +12,9 @@ export default createGlobalStyle`
     html {
         font-size: 16px;
     }
+
+    body {
+        transition: ${props => props.theme.transition.default};
+        background-color: ${props => props.theme.colors.white};
+    }
 `;

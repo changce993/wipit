@@ -3,6 +3,7 @@ import { Container, Content } from './styled';
 import { Sidenav, Navbar } from '../../Organisms';
 
 const index = ({ children }) => {
+  // TODO Unificar el ancho del color del Sidenav y el Navbar
   return (
     <>
       <Navbar sidebar={true}/>
