@@ -1,35 +1,45 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import tasksContext from '../../../../context/tasks/tasksContext';
 import userContext from '../../../../context/user/userContext';
-import { Button, Div, Text, Link } from '../../../Atoms';
+import { Text } from '../../../Atoms';
 import { Tags } from '../../../Molecules';
-import Title from '../Title';
+import Template from '../Template';
 import Chat from '../Chat';
 
 const Index = () => {
 
   const { task } = useContext(tasksContext);
   const { user } = useContext(userContext);
+
+  // TODO cambiar este useState por informacion real que llegue del backend 
+  const [ assignMe, setAssignMe ] = useState(false);
+  // TODO esta funcion deberia setear el id del usuario a la tarea, no un booleano
+  const handleAssign = () => setAssignMe(true);
+
+  const isChat = task?.withUser === user?.id;
+
+  const cta = {
+    handler: handleAssign,
+    value: 'Assign me'
+  }
+
+  const secondaryButton = {
+    to: '/backlog',
+    value: 'Similar tasks'
+  }
+
+  // Con "isChat" deberia ser suficiente para mostrar el chat o la tarea, no deberia ser necesario pasarle user && assignMe
   return (
-    <>
-      <Title title={task?.title}/>
-      {task?.withUser === user?.id ? (
+    <Template title={task?.title} cta={cta} secondaryButton={secondaryButton} isChat={isChat || user && assignMe} user={user} removeMargin={isChat || user && assignMe}>
+      {isChat || user && assignMe ? (
         <Chat/>
       ) : (
         <>
-          <Div flex="1">
-            <Div margin="1rem 0" overflowY="scroll">
-              <Text color="darkGray" marginBottom="1rem">{task?.description}</Text>
-              <Tags tags={task.tags}/>
-            </Div>
-          </Div>
-          <Div>
-            <Button width="100%">Assign me</Button>
-            <Link to="/backlog" display="block" width="fit-content" margin="16px auto 0">Similar tasks</Link>
-          </Div>
+          <Text color="darkGray">{task?.description}</Text>
+          <Tags tags={task.tags}/>
         </>
       )}
-    </>
+    </Template>
   )
 }
 

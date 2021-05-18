@@ -1,4 +1,4 @@
-import { GET_TASK, GET_TASKS } from '../../types';
+import { GET_TASK, GET_TASKS, GET_MY_BOARD } from '../../types';
 
 export default (state, action) => {
   switch(action.type){
@@ -11,6 +11,13 @@ export default (state, action) => {
       return {
         ...state,
         task: action.payload
+      }
+    case GET_MY_BOARD:
+      return {
+        ...state,
+        myTasks: action.payload.tasks.filter(task => task.creator === action.payload.userId),
+        tasksInProgress: action.payload.tasks.filter(task => task.withUser === action.payload.userId && !task.done),
+        tasksDone: action.payload.tasks.filter(task => (task.withUser === action.payload.userId && task.done)),
       }
     default:
       return state

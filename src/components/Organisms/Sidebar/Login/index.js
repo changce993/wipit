@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import sidebarContext from '../../../../context/sidebar/sidebarContext';
 import userContext from '../../../../context/user/userContext';
-import { Form, Button, Div, Link } from '../../../Atoms';
+import { Link } from '../../../Atoms';
 import { Input } from '../../../Molecules';
-import Title from '../Title';
+import Template from '../Template';
 import { useHistory } from 'react-router-dom';
 
 const Index = () => {
@@ -19,18 +19,17 @@ const Index = () => {
     history.push('/backlog');
   };
 
+  const cta = {
+    handler: loginFn,
+    value: 'Iniciar sesion'
+  }
+
   return (
-    <>
-      <Div flex="1">
-        <Title title="Login"/>
-        <Form margin="1rem 0" overflowY="scroll">
-          <Input label="Nombre de usuario"/>
-          <Input label="Contraseña"/>
-          <Link as="p" color="info" width="fit-content" margin="0 auto" cursor="pointer">¿Olvidaste tu contraseña?</Link>
-        </Form>
-      </Div>
-      <Button onClick={loginFn} width="100%">Iniciar sesion</Button>
-    </>
+    <Template title="Login" cta={cta}>
+      <Input label="Nombre de usuario"/>
+      <Input label="Contraseña"/>
+      <Link as="p" color="info" width="fit-content" margin="0 auto" cursor="pointer">¿Olvidaste tu contraseña?</Link>
+    </Template>
   )
 }
 

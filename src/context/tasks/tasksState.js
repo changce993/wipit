@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import TasksContext from './tasksContext';
 import tasksReducer from './tasksReducer';
 
-import { GET_TASK, GET_TASKS } from '../../types';
+import { GET_TASK, GET_TASKS, GET_MY_BOARD } from '../../types';
 
 import tasksJSON from '../Mocks/tasks.json';
 
@@ -10,7 +10,10 @@ const TasksState = ({ children }) => {
 
   const initialState = {
     tasks: [],
-    task: null
+    task: null,
+    myTasks: [],
+    tasksInProgress: [],
+    tasksDone: [],
   };
 
   const [ state, dispatch ] = useReducer(tasksReducer, initialState);
@@ -29,14 +32,28 @@ const TasksState = ({ children }) => {
     })
   };
 
-  const { tasks, task } = state;
+  const getMyBoard = userId => {
+    dispatch({
+      type: GET_MY_BOARD,
+      payload: {
+        userId,
+        tasks: tasksJSON
+      }
+    })
+  }
+
+  const { tasks, task, myTasks, tasksInProgress, tasksDone } = state;
 
   return (
     <TasksContext.Provider value={{
       tasks,
       task,
+      myTasks,
+      tasksInProgress,
+      tasksDone,
       getTasks,
-      getTask
+      getTask,
+      getMyBoard
     }}>
       {children}
     </TasksContext.Provider>

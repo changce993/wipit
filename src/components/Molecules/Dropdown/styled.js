@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 48px; // change to rem
+  height: 2.75rem; // change to rem
   background: ${props => props.theme.colors.white};
   width: ${({ width }) => width || '160px'};
   max-width: ${({ maxW }) => maxW || '100%'};
   min-width: ${({ minW }) => minW};
   padding: 0 16px;
-  border: ${props => `1px solid ${props.theme.colors.lightPrimary}`};
+  border: ${props => `1px solid ${props.theme.colors.lightGray}`};
   border-radius: ${props => props.theme.rounded.sm};
   display: flex;
   justify-content: space-between;
@@ -18,15 +18,11 @@ export const Container = styled.div`
   margin: 4px 0;
 
   g{
-    transition: ${props => props.theme.transition.default};
+    fill: ${props => props.theme.colors.gray};
   }
 
   :hover{
-    border: ${props => `1px solid ${props.theme.colors.primary}`};
-
-    g{
-      fill: ${props => props.theme.colors.primary};
-    }
+    border: ${props => `1px solid ${props.theme.colors.gray}`};
   }
 `;
 

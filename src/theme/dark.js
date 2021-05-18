@@ -9,6 +9,7 @@ export default {
     gray: '#606060',
     bgGray: '#070D10',
     lightGray: '#404040',
+    lightPrimary: 'rgba(255,0,0,.075)',
     white: '#000',
   },
   shadow: {

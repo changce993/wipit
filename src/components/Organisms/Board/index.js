@@ -2,17 +2,19 @@ import React, { useContext, useEffect } from 'react';
 import Board from './Board';
 import { Container } from './styled';
 import tasksContext from '../../../context/tasks/tasksContext';
+import userContext from '../../../context/user/userContext';
 
 const Index = () => {
-  const { tasks, getTasks } = useContext(tasksContext);
+  const { myTasks, tasksInProgress, tasksDone, getMyBoard } = useContext(tasksContext);
+  const { user } = useContext(userContext);
 
-  useEffect(() => getTasks(), []);
+  useEffect(() => getMyBoard(user.id), []);
 
   return (
     <Container>
-      <Board title="My tasks" tasks={tasks.slice(1, 2)}/>
-      <Board title="In progress" tasks={tasks.filter(task => task.withUser === 3)}/>
-      <Board title="Done" tasks={tasks.slice(3, -1)}/>
+      <Board title="My tasks" tasks={myTasks}/>
+      <Board title="In progress" tasks={tasksInProgress}/>
+      <Board title="Done" tasks={tasksDone}/>
     </Container>
   )
 }

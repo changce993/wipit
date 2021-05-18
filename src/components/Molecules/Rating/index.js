@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Star } from './styled';
 
-const index = ({ rating = 2 }) => {
+const index = ({ rating = 0 }) => {
   const finalRating = Math.round(rating);
   return (
     <Container>

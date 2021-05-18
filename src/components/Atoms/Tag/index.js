@@ -7,4 +7,5 @@ export default styled.p`
   background-color: ${props => props.theme.colors.lightPrimary};
   border-radius: ${props => props.theme.rounded.sm};
   font-family: ${props => props.theme.fontFamily.primary};
+  user-select: none;
 `;

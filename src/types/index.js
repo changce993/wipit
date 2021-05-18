@@ -9,3 +9,5 @@ export const SWITCH_THEME = "SWITCH_THEME";
 
 export const GET_TASKS = "GET_TASKS";
 export const GET_TASK = "GET_TASK";
+
+export const GET_MY_BOARD = "GET_MY_BOARD";

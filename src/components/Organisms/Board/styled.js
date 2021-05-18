@@ -14,6 +14,7 @@ export const Section = styled.section`
   border-radius: ${props => props.theme.rounded.sm};
   overflow-y: scroll;
   height: 100%;
+  border: ${props => `1px solid ${props.theme.colors.lightGray}`};
 `;
 
 export const Title = styled.h2`

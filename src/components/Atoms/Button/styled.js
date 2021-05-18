@@ -10,7 +10,7 @@ const Button = styled.button`
   margin: ${props => props.margin};
   width: ${props => props.width || '160px'};
   max-width: 100%;
-  height: 48px;
+  height: 2.75rem;
 `;
 
 export const Primary = styled(Button)`

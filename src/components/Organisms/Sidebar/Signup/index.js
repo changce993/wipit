@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import sidebarContext from '../../../../context/sidebar/sidebarContext';
 import userContext from '../../../../context/user/userContext';
-import { Form, Button, Div } from '../../../Atoms';
 import { Input } from '../../../Molecules';
-import Title from '../Title';
+import Template from '../Template';
 import { useHistory } from 'react-router-dom';
 
 const Index = () => {
@@ -19,19 +18,18 @@ const Index = () => {
     history.push('/backlog');
   };
 
+  const cta = {
+    handler: loginFn,
+    value: 'Crear cuenta'
+  }
+
   return (
-    <>
-      <Div>
-        <Title title="Sign up"/>
-        <Form margin="1rem 0" maxHeight="calc(100vh - 16rem)" overflowY="scroll">
-          <Input label="Nombre de usuario"/>
-          <Input label="Correo electronico"/>
-          <Input label="Contraseña"/>
-          <Input label="Repite tu contraseña"/>
-        </Form>
-      </Div>
-      <Button onClick={loginFn} width="100%">Crear cuenta</Button>
-    </>
+    <Template title="Sign up" cta={cta}>
+      <Input label="Nombre de usuario"/>
+      <Input label="Correo electronico"/>
+      <Input label="Contraseña"/>
+      <Input label="Repite tu contraseña"/>
+    </Template>
   )
 }
 
