@@ -1,12 +1,14 @@
 import React from 'react';
 import { Fullwidth } from '../../components/Template';
+import { useTranslation } from 'react-i18next'
 
-const index = () => {
+const Index = () => {
+  const { t } = useTranslation();
   return (
     <Fullwidth>
-      Home
+      {t("test")}
     </Fullwidth>
   )
 }
 
-export default index
+export default Index
