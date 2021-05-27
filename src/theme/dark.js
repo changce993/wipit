@@ -1,6 +1,6 @@
 import theme from './theme';
 
-export default {
+const dark = {
   ...theme,
   colors: {
     ...theme.colors,
@@ -15,4 +15,6 @@ export default {
   shadow: {
     1: '0 4px 10px 0 #151515',
   },
-}
+};
+
+export default dark;

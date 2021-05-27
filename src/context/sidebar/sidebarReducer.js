@@ -1,6 +1,6 @@
 import { SHOW_SIDEBAR, HIDDE_SIDEBAR } from '../../types';
 
-export default (state, action) => {
+const sidebarReducer = (state, action) => {
   switch(action.type){
     case SHOW_SIDEBAR:
       return {
@@ -17,4 +17,6 @@ export default (state, action) => {
     default:
       return state
   }
-}
+};
+
+export default sidebarReducer

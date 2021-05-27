@@ -30,8 +30,8 @@ const Index = () => {
 
   // Con "isChat" deberia ser suficiente para mostrar el chat o la tarea, no deberia ser necesario pasarle user && assignMe
   return (
-    <Template title={task?.title} cta={cta} secondaryButton={secondaryButton} isChat={isChat || user && assignMe} user={user} removeMargin={isChat || user && assignMe}>
-      {isChat || user && assignMe ? (
+    <Template title={task?.title} cta={cta} secondaryButton={secondaryButton} isChat={isChat || (user && assignMe)} user={user} removeMargin={isChat || (user && assignMe)}>
+      {isChat || (user && assignMe) ? (
         <Chat/>
       ) : (
         <>

@@ -2,13 +2,11 @@
   "name": "wipti",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://changce993.github.io/wipit",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "framer-motion": "^4.1.16",
-    "gh-pages": "^3.1.0",
     "i18next": "^20.2.4",
     "i18next-browser-languagedetector": "^6.1.1",
     "react": "^17.0.2",
@@ -21,8 +19,6 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

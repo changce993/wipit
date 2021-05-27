@@ -1,6 +1,6 @@
 import { SWITCH_THEME } from '../../types';
 
-export default (state, action) => {
+const darkModeReducer = (state, action) => {
   switch(action.type){
     case SWITCH_THEME:
       return {
@@ -10,4 +10,6 @@ export default (state, action) => {
     default:
       return state
   }
-}
+};
+
+export default darkModeReducer;

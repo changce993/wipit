@@ -16,7 +16,10 @@ const App = () => {
   const { user } = useContext(userContext);
   const { i18n } = useTranslation();
   
-  useEffect(() => i18n.changeLanguage(user?.lang || 'es'), [user]);
+  useEffect(() => {
+    i18n.changeLanguage(user?.lang || 'es');
+    // eslint-disable-next-line
+  }, [user]);
 
   return (
     <Router>

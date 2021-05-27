@@ -1,6 +1,6 @@
 import { GET_TASK, GET_TASKS, GET_MY_BOARD } from '../../types';
 
-export default (state, action) => {
+const tasksReducer = (state, action) => {
   switch(action.type){
     case GET_TASKS:
       return {
@@ -22,4 +22,6 @@ export default (state, action) => {
     default:
       return state
   }
-}
+};
+
+export default tasksReducer;

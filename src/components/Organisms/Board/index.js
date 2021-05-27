@@ -8,7 +8,10 @@ const Index = () => {
   const { myTasks, tasksInProgress, tasksDone, getMyBoard } = useContext(tasksContext);
   const { user } = useContext(userContext);
 
-  useEffect(() => getMyBoard(user.id), []);
+  useEffect(() => {
+    getMyBoard(user.id)
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Container>

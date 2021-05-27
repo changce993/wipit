@@ -10,7 +10,7 @@ const Navigation = () => {
   ];
   return (
     <NavigationContainer>
-      {links.map(({name, url}) => <Link to={url} isActive={window.location.pathname === url}>{name}</Link>)}
+      {links.map(({name, url}, index) => <Link key={index} to={url} isActive={window.location.pathname === url}>{name}</Link>)}
       <SwitchTheme/>
     </NavigationContainer>
   )

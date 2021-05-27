@@ -22,15 +22,15 @@ const Index = ({ sidebar }) => {
           <>
             <NavigationContainer>
               <Avatar src={user?.avatar} onClick={() => handleShowSidebar(CONSTANT.editProfile)}/>
-              <Link color="primary" onClick={() => handleShowSidebar(CONSTANT.newTask)}>Post a task</Link>
+              <Link as="p" color="primary" onClick={() => handleShowSidebar(CONSTANT.newTask)}>Post a task</Link>
             </NavigationContainer>
 
             <Navigation/>
           </>
         ) : (
           <NavigationContainer marginLeft="auto">
-            <Link onClick={() => handleShowSidebar(CONSTANT.login)}>Login</Link>
-            <Link onClick={() => handleShowSidebar(CONSTANT.signup)}>Register</Link>
+            <Link as="p" onClick={() => handleShowSidebar(CONSTANT.login)}>Login</Link>
+            <Link as="p" onClick={() => handleShowSidebar(CONSTANT.signup)}>Register</Link>
             <SwitchTheme/>
           </NavigationContainer>
         )}

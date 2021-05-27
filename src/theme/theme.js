@@ -1,4 +1,4 @@
-export default {
+const theme = {
   colors: {
     primary: '#F95959',
     darkPrimary: '#E05050',
@@ -69,4 +69,6 @@ export default {
   shadow: {
     1: '0 4px 10px 0 rgba(10,22,40,0.10)',
   },
-}
+};
+
+export default theme;

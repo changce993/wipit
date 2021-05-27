@@ -8,7 +8,10 @@ const Index = () => {
   const { md, xl, xxl, xxxl } = useResponsive();
   const { tasks, getTasks } = useContext(tasksContext);
 
-  useEffect(() => getTasks(), []);
+  useEffect(() => {
+    getTasks();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Container repeat={md ? 2 : xl ? 3 : xxl ? 4 : xxxl ? 5 : 6}>

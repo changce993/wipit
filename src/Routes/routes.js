@@ -3,7 +3,7 @@ import Board from '../pages/Board';
 import Backlog from '../pages/Backlog';
 import NotFound from '../pages/NotFound';
 
-export default [
+const routes = [
   {
     path: '/',
     component: Home,
@@ -25,3 +25,5 @@ export default [
     component: NotFound,
   }
 ];
+
+export default routes;
