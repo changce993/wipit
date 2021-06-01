@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import sidebarContext from '../../../../context/sidebar/sidebarContext';
-import userContext from '../../../../context/user/userContext';
-import { Link } from '../../../Atoms';
-import { Input } from '../../../Molecules';
+import sidebarContext from 'context/sidebar/sidebarContext';
+import userContext from 'context/user/userContext';
+import { Link } from 'components/Atoms';
+import { Input } from 'components/Molecules';
 import Template from '../Template';
 import { useHistory } from 'react-router-dom';
 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Title, Close, ArrowLeft } from './styled';
-import sidebarContext from '../../../context/sidebar/sidebarContext';
+import sidebarContext from 'context/sidebar/sidebarContext';
 
 const Tittle = ({ title, handleBack }) => {
   const { handleHiddeSidebar } = useContext(sidebarContext);

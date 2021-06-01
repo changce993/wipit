@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as StarIcon } from '../../../assets/icons/star.svg';
+import { ReactComponent as StarIcon } from 'assets/icons/star.svg';
 
 export const Container = styled.div`
   ${props => props}

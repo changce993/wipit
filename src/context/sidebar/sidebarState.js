@@ -2,18 +2,10 @@ import { useReducer } from 'react';
 import SidebarContext from './sidebarContext';
 import sidebarReducer from './sidebarReducer';
 
-import { SHOW_SIDEBAR, HIDDE_SIDEBAR } from '../../types';
+import { SHOW_SIDEBAR, HIDDE_SIDEBAR } from 'types';
+import { SIDEBAR_OPTIONS } from 'utils/constants';
 
 const SidebarState = ({ children }) => {
-
-  const CONSTANT = {
-    editProfile: 'EDIT_PROFILE',
-    login: 'LOGIN',
-    signup: 'SIGNUP',
-    newTask: 'NEW_TASK',
-    task: 'TASK',
-    rating: 'RATING'
-  }
 
   const initialState = {
     showSidebar: false,
@@ -35,7 +27,7 @@ const SidebarState = ({ children }) => {
 
   return (
     <SidebarContext.Provider value={{
-      CONSTANT,
+      SIDEBAR_OPTIONS,
       showSidebar,
       content,
       handleShowSidebar,

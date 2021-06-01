@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
-import { Text } from '../../Atoms';
+import { Text } from 'components/Atoms';
 import Tags from '../Tags';
 import { Task, Title } from './styled';
-import sidebarContext from '../../../context/sidebar/sidebarContext';
-import tasksContext from '../../../context/tasks/tasksContext';
+import sidebarContext from 'context/sidebar/sidebarContext';
+import tasksContext from 'context/tasks/tasksContext';
 
 const Index = ({ task, ...props }) => {
   const { title, description, tags } = task;
-  const { handleShowSidebar, CONSTANT } = useContext(sidebarContext);
+  const { handleShowSidebar, SIDEBAR_OPTIONS } = useContext(sidebarContext);
   const { getTask } = useContext(tasksContext);
 
   const handleTask = () => {
-    handleShowSidebar(CONSTANT.task)
+    handleShowSidebar(SIDEBAR_OPTIONS.task)
     getTask(task);
   };
 

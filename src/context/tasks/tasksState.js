@@ -2,9 +2,9 @@ import { useReducer } from 'react';
 import TasksContext from './tasksContext';
 import tasksReducer from './tasksReducer';
 
-import { GET_TASK, GET_TASKS, GET_MY_BOARD } from '../../types';
+import { GET_TASK, GET_TASKS, GET_MY_BOARD } from 'types';
 
-import tasksJSON from '../Mocks/tasks.json';
+import tasksJSON from 'Mocks/tasks.json';
 
 const TasksState = ({ children }) => {
 

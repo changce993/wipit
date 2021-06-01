@@ -1,4 +1,4 @@
-import { GET_TASK, GET_TASKS, GET_MY_BOARD } from '../../types';
+import { GET_TASK, GET_TASKS, GET_MY_BOARD } from 'types';
 
 const tasksReducer = (state, action) => {
   switch(action.type){

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { Container } from './styled';
-import { Task } from '../../Molecules';
-import { useResponsive } from '../../../hooks';
-import tasksContext from '../../../context/tasks/tasksContext';
+import { Task } from 'components/Molecules';
+import { useResponsive } from 'hooks';
+import tasksContext from 'context/tasks/tasksContext';
 
 const Index = () => {
   const { md, xl, xxl, xxxl } = useResponsive();

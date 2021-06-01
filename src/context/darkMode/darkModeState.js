@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import DarkModeContext from './darkModeContext';
 import darkModeReducer from './darkModeReducer';
 
-import { SWITCH_THEME } from '../../types';
+import { SWITCH_THEME } from 'types';
 
 const DarkModeState = ({ children }) => {
 

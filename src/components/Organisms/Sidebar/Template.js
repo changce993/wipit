@@ -1,12 +1,12 @@
 import { useContext } from 'react';
-import { Button, Div, Input, Link } from '../../Atoms';
+import { Button, Div, Input, Link } from 'components/Atoms';
 import Title from './Title';
 import TaskAction from './TaskAction';
 import { Body } from './styled';
-import sidebarContext from '../../../context/sidebar/sidebarContext';
+import sidebarContext from 'context/sidebar/sidebarContext';
 
 const Template = ({ title, handleBack, cta, secondaryButton, isChat, user, children, ...props }) => {
-  const { CONSTANT, content } = useContext(sidebarContext);
+  const { SIDEBAR_OPTIONS, content } = useContext(sidebarContext);
 
   return (
     <>
@@ -21,7 +21,7 @@ const Template = ({ title, handleBack, cta, secondaryButton, isChat, user, child
             <TaskAction/>
           </>
         ) : (
-          !user && CONSTANT.task === content ? null : (
+          !user && SIDEBAR_OPTIONS.task === content ? null : (
             <>
               {cta && <Button onClick={cta.handler} width="100%">{cta.value}</Button>}
               {secondaryButton && (

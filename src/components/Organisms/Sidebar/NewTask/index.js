@@ -1,5 +1,5 @@
-import { Div } from '../../../Atoms';
-import { Input, Textarea, Dropdown } from '../../../Molecules';
+import { Div } from 'components/Atoms';
+import { Input, Textarea, Dropdown } from 'components/Molecules';
 import Template from '../Template';
 
 const Index = () => {

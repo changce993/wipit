@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Div } from '../../../Atoms';
+import { Div } from 'components/Atoms';
 
 export const Chat = styled.section`
   flex:1;

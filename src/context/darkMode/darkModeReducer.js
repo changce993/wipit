@@ -1,4 +1,4 @@
-import { SWITCH_THEME } from '../../types';
+import { SWITCH_THEME } from 'types';
 
 const darkModeReducer = (state, action) => {
   switch(action.type){

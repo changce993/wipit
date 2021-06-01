@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from './styled';
-import { SwitchTheme } from '../../Molecules';
-import { Link } from '../../Atoms';
+import { SwitchTheme } from 'components/Molecules';
+import { Link } from 'components/Atoms';
 
 const Navigation = () => {
   const links = [

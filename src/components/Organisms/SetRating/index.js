@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input, Label } from '../../Atoms';
+import { Input, Label } from 'components/Atoms';
 import { Container, Star } from './styled';
 
 const Index = ({ rating = 1, onChange }) => {

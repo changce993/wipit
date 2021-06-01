@@ -1,5 +1,5 @@
 import React from 'react';
-import { Textarea, Label } from '../../Atoms';
+import { Textarea, Label } from 'components/Atoms';
 
 const index = ({ label, ...props }) => {
   return (

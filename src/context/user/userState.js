@@ -2,9 +2,9 @@ import { useReducer } from 'react';
 import userContext from './userContext';
 import userReducer from './userReducer';
 
-import { LOGIN, LOGOUT } from '../../types';
+import { LOGIN, LOGOUT } from 'types';
 
-import userJSON from '../Mocks/user.json';
+import userJSON from 'Mocks/user.json';
 
 const UserState = ({ children }) => {
 

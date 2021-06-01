@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tags } from './styled';
-import { Tag } from '../../Atoms';
+import { Tag } from 'components/Atoms';
 
 const index = ({ tags }) => {
   return (

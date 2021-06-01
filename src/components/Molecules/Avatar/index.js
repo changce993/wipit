@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Text } from '../../Atoms';
+import { Avatar, Text } from 'components/Atoms';
 import { Container } from './styled';
 
 const index = ({ user }) => {

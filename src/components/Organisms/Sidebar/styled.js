@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Text } from '../../Atoms';
-import { ReactComponent as Cross } from '../../../assets/icons/cross.svg';
-import { ReactComponent as Arrow } from '../../../assets/icons/arrowLeft.svg';
+import { Text } from 'components/Atoms';
+import { ReactComponent as Cross } from 'assets/icons/cross.svg';
+import { ReactComponent as Arrow } from 'assets/icons/arrowLeft.svg';
 
 export const Container = styled.section`
   padding: 1.25rem;

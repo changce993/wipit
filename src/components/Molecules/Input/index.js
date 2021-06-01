@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Label } from '../../Atoms';
+import { Input, Label } from 'components/Atoms';
 
 const index = ({ label, ...props }) => {
   return (

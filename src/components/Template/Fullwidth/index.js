@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '../../Organisms';
+import { Navbar } from 'components/Organisms';
 import { Container } from './styled';
 
 const index = ({ children }) => {

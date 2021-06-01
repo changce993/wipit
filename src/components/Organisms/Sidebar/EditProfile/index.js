@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { Avatar } from '../../../Atoms';
-import { Input, Textarea } from '../../../Molecules';
+import { Avatar } from 'components/Atoms';
+import { Input, Textarea } from 'components/Molecules';
 import Template from '../Template';
-import userContext from '../../../../context/user/userContext';
+import userContext from 'context/user/userContext';
 
 const Index = () => {
 

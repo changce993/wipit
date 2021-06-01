@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Label, Text, Div } from '../../../components/Atoms';
+import { Label, Text, Div } from 'components/Atoms';
 import { Container, Options } from './styled';
 import { optionProps } from './styledProps';
-import { ReactComponent as SelectOption } from '../../../assets/icons/selectOption.svg';
+import { ReactComponent as SelectOption } from 'assets/icons/selectOption.svg';
 
 const Dropdown = ({ children, label, options = [], setOption, option, width, ...props }) => {
   const [ isOpen, setIsOpen ] = useState(false);

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import routes from './routes';
-import userContext from '../context/user/userContext';
+import userContext from 'context/user/userContext';
 
 const Index = () => {
   const { user } = useContext(userContext);

@@ -1,4 +1,4 @@
-import { SHOW_SIDEBAR, HIDDE_SIDEBAR } from '../../types';
+import { SHOW_SIDEBAR, HIDDE_SIDEBAR } from 'types';
 
 const sidebarReducer = (state, action) => {
   switch(action.type){

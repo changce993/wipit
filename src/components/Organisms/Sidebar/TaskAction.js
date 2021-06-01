@@ -1,13 +1,13 @@
 import { useContext } from 'react';
-import { Div } from '../../Atoms';
+import { Div } from 'components/Atoms';
 import { Action } from './styled';
-import sidebarContext from '../../../context/sidebar/sidebarContext';
+import sidebarContext from 'context/sidebar/sidebarContext';
 
 const Index = () => {
-  const { CONSTANT, handleShowSidebar } = useContext(sidebarContext);
+  const { SIDEBAR_OPTIONS, handleShowSidebar } = useContext(sidebarContext);
   return (
     <Div display="flex" gridGap="1rem">
-      <Action color="success" bg="lightSuccess" onClick={() => handleShowSidebar(CONSTANT.rating)}>
+      <Action color="success" bg="lightSuccess" onClick={() => handleShowSidebar(SIDEBAR_OPTIONS.rating)}>
         Done
       </Action>
       <Action color="info" bg="lightInfo">

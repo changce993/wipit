@@ -1,7 +1,7 @@
-import Home from '../pages/Home';
-import Board from '../pages/Board';
-import Backlog from '../pages/Backlog';
-import NotFound from '../pages/NotFound';
+import Home from 'pages/Home';
+import Board from 'pages/Board';
+import Backlog from 'pages/Backlog';
+import NotFound from 'pages/NotFound';
 
 const routes = [
   {

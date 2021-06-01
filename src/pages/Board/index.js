@@ -1,6 +1,6 @@
 import React from 'react';
-import { Board } from '../../components/Organisms';
-import { Fullwidth } from '../../components/Template';
+import { Board } from 'components/Organisms';
+import { Fullwidth } from 'components/Template';
 
 const index = () => {
   return (

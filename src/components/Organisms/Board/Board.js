@@ -1,5 +1,5 @@
 import React from 'react';
-import { Task } from '../../Molecules';
+import { Task } from 'components/Molecules';
 import { Section, Title, Tasks } from './styled';
 
 const Board = ({ title, tasks = [] }) => {

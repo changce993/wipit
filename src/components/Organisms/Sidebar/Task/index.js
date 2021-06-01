@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
-import tasksContext from '../../../../context/tasks/tasksContext';
-import userContext from '../../../../context/user/userContext';
-import { Text } from '../../../Atoms';
-import { Tags } from '../../../Molecules';
+import tasksContext from 'context/tasks/tasksContext';
+import userContext from 'context/user/userContext';
+import { Text } from 'components/Atoms';
+import { Tags } from 'components/Molecules';
 import Template from '../Template';
 import Chat from '../Chat';
 

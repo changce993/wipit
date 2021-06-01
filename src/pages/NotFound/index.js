@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fullwidth } from '../../components/Template';
+import { Fullwidth } from 'components/Template';
 
 const index = () => {
   return (

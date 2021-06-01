@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Container, Content } from './styled';
-import darkModeContext from '../../../context/darkMode/darkModeContext';
+import darkModeContext from 'context/darkMode/darkModeContext';
 
 const Index = ({ ...props }) => {
   const { isDark, handleSwitchTheme } = useContext(darkModeContext);

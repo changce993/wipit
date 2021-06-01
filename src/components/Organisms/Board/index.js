@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import Board from './Board';
 import { Container } from './styled';
-import tasksContext from '../../../context/tasks/tasksContext';
-import userContext from '../../../context/user/userContext';
+import tasksContext from 'context/tasks/tasksContext';
+import userContext from 'context/user/userContext';
 
 const Index = () => {
   const { myTasks, tasksInProgress, tasksDone, getMyBoard } = useContext(tasksContext);

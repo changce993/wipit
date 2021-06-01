@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import avatar from '../../../assets/img/avatar.png';
+import avatar from 'assets/img/avatar.png';
 
 const Avatar = styled.img`
   ${props => props}
