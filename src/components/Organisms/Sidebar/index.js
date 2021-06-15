@@ -8,7 +8,8 @@ import EditProfile from './EditProfile';
 import NewTask from './NewTask';
 import Task from './Task';
 import Rating from './Rating';
-import UserProfile from './UserProfile';
+import UserProfile from './UserProfile'
+import Profile from './Profile';
 
 const Index = () => {
 
@@ -23,6 +24,7 @@ const Index = () => {
       {content === SIDEBAR_OPTIONS.task && <Task/>}
       {content === SIDEBAR_OPTIONS.rating && <Rating/>}
       {content === SIDEBAR_OPTIONS.userProfile && <UserProfile/>}
+      {content === SIDEBAR_OPTIONS.profile && <Profile/>}
     </Container>
   )
 }

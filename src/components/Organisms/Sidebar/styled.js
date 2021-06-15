@@ -6,23 +6,15 @@ import { ReactComponent as Arrow } from 'assets/icons/arrowLeft.svg';
 export const Container = styled.section`
   padding: 1.25rem;
   background-color: ${props => props.theme.colors.white};
-  box-shadow: ${props => props.theme.shadow[1]};
-  border-radius: ${props => props.theme.rounded.md};
-  display: flex;
+  display: ${props => props.showSidebar ? 'flex' : 'none'};
   flex-direction: column;
   justify-content: space-between;
-  position: fixed;
-  top: 5rem;
-  height: calc(100vh - 7rem);
+  height: 100%;
   width: 20rem;
   max-width: 100%;
-  border: ${props => `1px solid ${props.theme.colors.lightGray}`};
-
-  visibility: ${props => props.showSidebar ? 'show' : 'hidden'};
-  opacity: ${props => props.showSidebar ? 1 : 0};
-  right: 2rem;
   transition: ${props => props.theme.transition.default};
-  transform: scale(${props => props.showSidebar ? 1 : 1.1});
+  opacity: ${props => props.showSidebar ? '1' : '0'};
+  transform: ${props => !props.showSidebar && 'translateX(320px)'};
 `;
 
 export const Title = styled(Text)`

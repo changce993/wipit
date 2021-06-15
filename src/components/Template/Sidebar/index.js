@@ -1,21 +1,17 @@
 import React, { useContext } from 'react';
-import { Grid, Content } from './styled';
-import { Sidenav, Navbar, Sidebar } from 'components/Organisms';
+import { Grid, Container } from './styled';
+import { Navbar, Sidebar } from 'components/Organisms';
 import sidebarContext from 'context/sidebar/sidebarContext';
 
 const Index = ({ children }) => {
   const { showSidebar } = useContext(sidebarContext);
-  // TODO Unificar el ancho del color del Sidenav y el Navbar
   return (
     <>
-      <Navbar sidebar={true}/>
+      <Navbar/>
       <Grid showSidebar={showSidebar}>
-        <Sidenav/>
-
-        <Content>
+        <Container>
           {children}
-        </Content>
-
+        </Container>
         <Sidebar/>
       </Grid>
     </>

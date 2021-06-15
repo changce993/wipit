@@ -1,12 +1,12 @@
 import React from 'react';
 import { Board } from 'components/Organisms';
-import { Fullwidth } from 'components/Template';
+import { Fullwidth, Sidebar } from 'components/Template';
 
 const index = () => {
   return (
-    <Fullwidth>
+    <Sidebar>
       <Board/>
-    </Fullwidth>
+    </Sidebar>
   )
 }
 

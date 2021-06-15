@@ -13,5 +13,6 @@ export const SIDEBAR_OPTIONS = {
   newTask: 'NEW_TASK',
   task: 'TASK',
   rating: 'RATING',
-  userProfile: 'userProfile'
+  userProfile: 'userProfile',
+  profile: 'profile'
 };

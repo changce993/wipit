@@ -21,7 +21,7 @@ const Index = ({ sidebar }) => {
         {user ? (
           <>
             <NavigationContainer>
-              <Avatar src={user?.avatar} onClick={() => handleShowSidebar(SIDEBAR_OPTIONS.editProfile)}/>
+              <Avatar src={user?.avatar} onClick={() => handleShowSidebar(SIDEBAR_OPTIONS.profile)}/>
               <Link as="p" color="primary" onClick={() => handleShowSidebar(SIDEBAR_OPTIONS.newTask)}>Post a task</Link>
             </NavigationContainer>
 

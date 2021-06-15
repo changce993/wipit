@@ -5,7 +5,7 @@ import { capitalize } from 'utils/functions';
 
 const Index = () => {
   const { avatar, firstname, lastname, username, biography, profession } = MockUser;
-  console.log(MockUser);
+
   return (
     <Template title={capitalize(username)}>
       <Avatar size="7rem" margin="0 auto" src={avatar}/>

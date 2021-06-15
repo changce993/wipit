@@ -22,7 +22,10 @@ const UserState = ({ children }) => {
     })
   };
 
-  const handleLogout = () => dispatch({ type: LOGOUT });
+  const handleLogout = () => {
+    dispatch({ type: LOGOUT });
+    window.location.href = "/";
+  };
 
   const { user } = state;
 

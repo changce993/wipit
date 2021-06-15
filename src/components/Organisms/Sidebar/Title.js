@@ -6,7 +6,7 @@ const Tittle = ({ title, handleBack }) => {
   const { handleHiddeSidebar } = useContext(sidebarContext);
   return (
     <Title>
-      <Title justify="flex-start" gap=".5rem">
+      <Title justify="flex-start" gap=".5rem" as="span">
         {handleBack && <ArrowLeft onClick={handleBack}/>}
         {title}
       </Title>
